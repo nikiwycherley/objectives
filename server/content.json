@@ -1,0 +1,26 @@
+{
+    "name": {
+      "title": "Enter Name",
+      "firstName": "First Name",
+      "lastName": "Last Name"
+  },
+  "errors":[
+    {
+      "type": "*",
+      "path": "firstName",
+      "message": "Enter your name"
+    }
+  ],"jobTitle": {
+    "title": "Title and Staff Number",
+    "jobTitle": "Enter Job Title",
+    "staffNumber": "Staff Number"
+},
+"errors":[
+  {
+    "type": "*",
+    "path": "firstName",
+    "message": "Enter your name"
+  }
+]
+
+}

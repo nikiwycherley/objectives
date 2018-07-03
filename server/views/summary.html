@@ -1,0 +1,114 @@
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your
+      <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+<nav class="nojs-hide">
+  <a href="javascript: window.history.go(-1)" class="link-back" name="back">Back</a>
+</nav>
+<h2 id="heading" class="heading-large"></h2>
+<main id="person-name-page">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Summary</h1>
+
+      <table>
+        <caption class="heading-small">Personal Information</caption>
+        <tbody>
+          <tr>
+            <td>Name:</td>
+            <td>{{firstName}} {{lastName}}</td>
+            <td> <a href="name">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Job Title:</td>
+            <td>{{jobTitle}}</td>
+            <td> <a href="jobTitle">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Staff Number:</td>
+            <td>{{staffNumber}}</td>
+            <td> <a href="JobTitle">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Line Manager</td>
+            <td>{{lineManager}}</td>
+            <td> <a href="lineManager">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Grade</td>
+            <td>{{grade}}</td>
+            <td> <a href="grade">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td>{{date}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>      
+      <h4 class="heading-small">Objectives</h4>
+      <br>
+      <p>Performance against SMART (Specific, Mesureable, Achiveable, Realistic and Timed) objectives - for guidance read 'How
+          to: Set SMART objectives'.</p>
+      <br>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+              {{what}}    <a href="objectives">Edit</a>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+            {{how}}
+        </div>
+      </details>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            {{what}}      <a href="objectives">Edit</a>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          {{how}}
+        </div>
+      </details>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            {{what}}      <a href="objectives">Edit</a>
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          {{how}}
+        </div>
+      </details>
+      <br>
+      <h4 class="heading-small">Development</h4>
+      <fieldset>
+          <div class="form-group">
+              <label class="form-label" for="textarea">
+                  Record agreed development activity below
+              </label>
+              <textarea class="form-control form-control-3-4" id="development" name="development" value="{{development}}" rows="5"></textarea>
+          </div>
+      </fieldset>
+      <h4 class="heading-small">Mid-and end-year assessment notes</h4>
+      <p>
+          In making mid- or end-year assessments, it is important to acknowledge and set aside any personal bias, conscious or unconscious, to ensure an objective appraisal of the person you are reporting on.  
+
+          Where indicative marking highlights additional Support and Development, the line manager must record the reasons for this on a supplementary sheet. This will ensure the employee understands what changes and support to focus on to meet the objective to the required standard.    
+      </p>
+      <h4 class="heading-small">Mid-year performance</h4>
+      <fieldset>
+          <div class="form-group">
+              <label class="form-label" for="textarea">
+                  Summarise below the rationale for the indicative marking, including reference to the ‘what’ and the ‘how’. Also reflect progress made against development plan.
+              </label>
+              <textarea class="form-control form-control-3-4" id="development" name="development" value="{{development}}" rows="5"></textarea>
+          </div>
+      </fieldset>
+
+    </div>
+  </div>
