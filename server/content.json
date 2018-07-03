@@ -21,6 +21,37 @@
     "path": "firstName",
     "message": "Enter your name"
   }
-]
+  ],"lineManager": {
+    "title": "Line Manager",
+    "lineManager": "Enter Line Manager"
+  },
+  "errors":[
+  {
+    "type": "*",
+    "path": "firstName",
+    "message": "Enter your name"
+  }
+  ],"grade": {
+    "title": "Grade",
+    "grade": "Enter what your current pay grade is"
+  },
+  "errors":[
+  {
+    "type": "*",
+    "path": "firstName",
+    "message": "Enter your name"
+  }
+  ],"objectives": {
+    "title": "Objectives",
+    "what": "What (is to be achived and by when)",
+    "how": "How (behaviours and values, and use of skills, competencies, experience and knowledge?)"
+  },
+  "errors":[
+  {
+    "type": "*",
+    "path": "firstName",
+    "message": "Enter your name"
+  }
+  ]
 
 }

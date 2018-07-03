@@ -1,9 +1,12 @@
 const content = require('../content').jobTitle
 
-function ViewModel (title) {
-  title = title || {}
-  this.jobTitle = content.jobTitle
-  this.staffNumber = content.staffNumber
+function ViewModel (session) {
+  const role = session.role || {}
+  this.jobTitle = role.jobTitle
+  this.staffNumber = role.staffNumber
+  this.jobTitleLabel = content.jobTitle
+  this.title = content.title
+  this.staffNumberLabel = content.staffNumber
 }
 
 module.exports = ViewModel

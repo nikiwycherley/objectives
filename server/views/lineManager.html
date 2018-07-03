@@ -10,11 +10,11 @@
   <main id="person-name-page">
     <div class="grid-row">
       <div class="column-two-thirds">
-        <h1 class="heading-large">Line Manager</h1>
+        <h1 class="heading-large">{{title}}</h1>
         <form method="post" autocomplete="off" novalidate>
           <fieldset>
             <div class="form-group">
-              <label for="lineManager" class="form-label">Name of your Line Manager</label>
+              <label for="lineManager" class="form-label">{{lineManagerLabel}}</label>
               <input class="form-control" id="lineManager" name="lineManager" value="{{lineManager}}" type="text" maxlength="30">
             </div>
           </fieldset>

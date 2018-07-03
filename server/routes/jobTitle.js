@@ -3,10 +3,10 @@ const session = require('../session')
 const ViewModel = require('../models/jobTitle')
 
 const handlers = {
-  get: (request, h) => {
+  get: async (request, h) => {
     // Prepare the model
-    
-    const model = new ViewModel()
+    const state = await session.get()
+    const model = new ViewModel(state)
     return h.view('jobTitle', model)
 
     // Respond with the view

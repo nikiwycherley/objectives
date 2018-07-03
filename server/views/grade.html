@@ -10,11 +10,11 @@
 <main id="person-name-page">
 <div class="grid-row">
     <div class="column-two-thirds">
-    <h1 class="heading-large">Grade</h1>
+    <h1 class="heading-large">{{title}}</h1>
     <form method="post" autocomplete="off" novalidate>
         <fieldset>
         <div class="form-group">
-            <label for="grade" class="form-label">Enter what your current pay grade is</label>
+            <label for="grade" class="form-label">{{gradeLabel}}</label>
             <input class="form-control" id="grade" name="grade" value="{{grade}}" type="text" maxlength="30">
         </div>
         </fieldset>

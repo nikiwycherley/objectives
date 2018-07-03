@@ -10,18 +10,18 @@
 <main id="person-name-page">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large">Objectives</h1>
+      <h1 class="heading-large">{{title}}</h1>
         <form method="post" autocomplete="off" novalidate>
           <fieldset>
         <div class="form-group">
           <label class="form-label" for="what">
-            What (is to be achived and by when)
+            {{whatLabel}}
           </label>
           <textarea class="form-control form-control-3-4" id="what" name="what" value="{{what}}" rows="5"></textarea>
         </div>
         <div class="form-group">
           <label class="form-label" for="how">
-            How (behaviours and values, and use of skills,<br> competencies, experience and knowledge?)
+            {{howLabel}}
           </label>
           <textarea class="form-control form-control-3-4" id="how" name="how" value="{{how}}" rows="5"></textarea>
         </div>
