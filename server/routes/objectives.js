@@ -14,10 +14,20 @@ const handlers = {
   post: async (request, h) => {
     // Update the session model
     const payload = request.payload
-    const db = await session.merge({ objectives: payload })
+    const type = request.payload.type
 
-    // Proceed to the next step
-    return h.redirect(`/summary`)
+    delete payload.type
+    const state = await session.get()
+    const objectives = state.objectives
+    objectives.push(payload)
+
+    if (type === 'add') {
+      const model = new ViewModel(state)
+      return h.view('objectives', model)
+    } else {
+      // Proceed to the next step
+      return h.redirect(`/summary`)
+    }
   },
   fail: (request, h, error) => {
     // Get the errors and prepare the model

@@ -1,4 +1,6 @@
-const db = {}
+const db = {
+  objectives: []
+}
 
 module.exports = {
   merge: function (data) {

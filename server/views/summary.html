@@ -54,6 +54,7 @@
       <p>Performance against SMART (Specific, Mesureable, Achiveable, Realistic and Timed) objectives - for guidance read 'How
           to: Set SMART objectives'.</p>
       <br>
+      {{# objectives}}
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -64,27 +65,9 @@
             {{how}}
         </div>
       </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            {{what}}      <a href="objectives">Edit</a>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          {{how}}
-        </div>
-      </details>
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            {{what}}      <a href="objectives">Edit</a>
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          {{how}}
-        </div>
-      </details>
       <br>
+      {{/objectives}}
+      
       <h4 class="heading-small">Development</h4>
       <fieldset>
           <div class="form-group">

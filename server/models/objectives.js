@@ -6,7 +6,7 @@ function ViewModel (session) {
   this.how = objectives.how
   this.whatLabel = content.what
   this.title = content.title
-  this.howLabel = content.howNumber
+  this.howLabel = content.how
 }
 
 module.exports = ViewModel

@@ -8,6 +8,7 @@ module.exports = [{
       const state = await session.get()
       const model = {}
       var d = new Date()
+     
 
       // setting Model elements
       model.date = d
@@ -17,8 +18,8 @@ module.exports = [{
       model.staffNumber = state.role.staffNumber
       model.lineManager = state.lineManager.lineManager
       model.grade = state.grade.grade
-      model.what = state.objectives.what
-      model.how = state.objectives.how
+      model.objectives = state.objectives
+      // model.how = state.objectives.how
       console.log(model)
       return h.view('summary', model)
     }
