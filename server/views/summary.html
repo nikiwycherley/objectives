@@ -13,7 +13,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1 class="heading-large">Summary</h1>
-
+      <form method="post" autocomplete="off" novalidate></form>
       <table>
         <caption class="heading-small">Personal Information</caption>
         <tbody>
@@ -67,6 +67,9 @@
       </details>
       <br>
       {{/objectives}}
+      <br>
+      <button type="submit" class="button" name="pdf" value="continue">Print PDF</button>
+      </form>
       
       <h4 class="heading-small">Development</h4>
       <fieldset>
