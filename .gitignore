@@ -8,3 +8,5 @@ server/views/layout.html
 server/public/gft
 server/public/gtm
 server/public/build
+package.json
+package-lock.json
