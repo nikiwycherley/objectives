@@ -34,6 +34,7 @@ const handlers = {
     const errors = error
     const payload = request.payload || {}
     const model = new ViewModel(payload, errors)
+    console.log(payload)
     // Respond with the view with errors
     return h.view('objectives', model).takeover()
   }
@@ -44,7 +45,6 @@ module.exports = [{
   path: '/objectives',
   options: {
     description: 'Handle the page request for the person name',
-    // pre: [{ method: pre.ensureAccountType }],
     handler: handlers.get
   }
 }, {
@@ -55,7 +55,9 @@ module.exports = [{
     handler: handlers.post,
     validate: {
       payload: {
-        objectives: joi.string().required()
+        what: joi.string().required(),
+        how: joi.string().required(),
+        type: joi.string()
       },
       failAction: handlers.fail
     }
