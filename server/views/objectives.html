@@ -14,16 +14,27 @@
         <form method="post" autocomplete="off" novalidate>
           <fieldset>
         <div class="form-group">
+            {{#if hasErrorMessage}}
+            <div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
+                <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
+                    {{joiErrorMessage}}
+                </h2>
+            </div>
+            <label for="waste" id="error-full-name">
+                <span class="error-message">{{errorMessage.message}}</span>
+            </br>
+            </label>
+            {{/if}}
           <label class="form-label" for="what">
             {{whatLabel}}
           </label>
-          <textarea class="form-control form-control-3-4" id="what" name="what" value="{{what}}" rows="5"></textarea>
+          <textarea class="form-control {{#if hasErrorMessage}}form-control-error{{/if}} form-control-3-4" id="what" name="what" value="{{what}}" rows="5"></textarea>
         </div>
         <div class="form-group">
           <label class="form-label" for="how">
             {{howLabel}}
           </label>
-          <textarea class="form-control form-control-3-4" id="how" name="how" value="{{how}}" rows="5"></textarea>
+          <textarea class="form-control {{#if hasErrorMessage}}form-control-error{{/if}} form-control-3-4" id="how" name="how" value="{{how}}" rows="5"></textarea>
         </div>
         </fieldset>
         <button type="submit" class="button" name="type" value="continue">Continue</button>

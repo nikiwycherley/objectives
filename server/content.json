@@ -1,57 +1,30 @@
 {
-    "name": {
-      "title": "Enter Name",
-      "firstName": "First Name",
-      "lastName": "Last Name"
+  "name": {
+    "title": "Enter Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "error": "Please enter your first name and last name"
   },
-  "errors":[
-    {
-      "type": "*",
-      "path": "firstName",
-      "message": "Enter your name"
-    }
-  ],"jobTitle": {
+  "jobTitle": {
     "title": "Title and Staff Number",
     "jobTitle": "Enter Job Title",
-    "staffNumber": "Staff Number"
-},
-"errors":[
-  {
-    "type": "*",
-    "path": "firstName",
-    "message": "Enter your name"
-  }
-  ],"lineManager": {
+    "staffNumber": "Staff Number",
+    "error": "Please enter your Job Title and Staff Number"
+  },
+  "lineManager": {
     "title": "Line Manager",
-    "lineManager": "Enter Line Manager"
+    "lineManager": "Enter Line Manager",
+    "error":"Please enter the name of your Line Manager"
   },
-  "errors":[
-  {
-    "type": "*",
-    "path": "firstName",
-    "message": "Enter your name"
-  }
-  ],"grade": {
+   "grade": {
     "title": "Grade",
-    "grade": "Enter what your current pay grade is"
+    "grade": "Enter what your current pay grade is",
+    "error":"Please enter your current pay grade"
   },
-  "errors":[
-  {
-    "type": "*",
-    "path": "firstName",
-    "message": "Enter your name"
-  }
-  ],"objectives": {
+    "objectives": {
     "title": "Objectives",
     "what": "What (is to be achived and by when)",
-    "how": "How (behaviours and values, and use of skills, competencies, experience and knowledge?)"
-  },
-  "errors":[
-  {
-    "type": "*",
-    "path": "firstName",
-    "message": "Enter your name"
+    "how": "How (behaviours and values, and use of skills, competencies, experience and knowledge?)",
+    "error":"Please enter your an Objective"
   }
-  ]
-
 }

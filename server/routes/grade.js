@@ -20,12 +20,11 @@ const handlers = {
     return h.redirect(`/objectives`)
   },
   fail: (request, h, error) => {
-    // Get the errors and prepare the model
-    // const errors = error.details
+    const errors = error
     const payload = request.payload || {}
-    // const model = new ViewModel(payload, errors)
+    const model = new ViewModel(payload, errors)
     // Respond with the view with errors
-    return h.view('grade'/*, model*/)
+    return h.view('grade', model).takeover()
   }
 }
 
@@ -42,8 +41,12 @@ module.exports = [{
   path: '/grade',
   options: {
     description: 'Handle the page submission the person name',
-    // pre: [{ method: pre.ensureAccountType }],
-    handler: handlers.post
-    // validate: { payload: schema, failAction: handlers.fail }
+    handler: handlers.post,
+    validate: {
+      payload: {
+        grade: joi.string().required()
+      },
+      failAction: handlers.fail
+    }
   }
 }]

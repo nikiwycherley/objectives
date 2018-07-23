@@ -21,11 +21,11 @@ const handlers = {
   },
   fail: (request, h, error) => {
     // Get the errors and prepare the model
-    // const errors = error.details
+    const errors = error
     const payload = request.payload || {}
-    // const model = new ViewModel(payload, errors)
+    const model = new ViewModel(payload, errors)
     // Respond with the view with errors
-    return h.view('jobTitle'/*, model*/)
+    return h.view('jobTitle', model).takeover()
   }
 }
 
@@ -42,8 +42,13 @@ module.exports = [{
   path: '/jobTitle',
   options: {
     description: 'Handle the page submission the person name',
-    // pre: [{ method: pre.ensureAccountType }],
-    handler: handlers.post
-    // validate: { payload: schema, failAction: handlers.fail }
+    handler: handlers.post,
+    validate: {
+      payload: {
+        jobTitle: joi.string().required(),
+        staffNumber: joi.string().required()
+      },
+      failAction: handlers.fail
+    }
   }
 }]

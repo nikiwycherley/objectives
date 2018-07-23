@@ -31,11 +31,11 @@ const handlers = {
   },
   fail: (request, h, error) => {
     // Get the errors and prepare the model
-    // const errors = error.details
+    const errors = error
     const payload = request.payload || {}
-    // const model = new ViewModel(payload, errors)
+    const model = new ViewModel(payload, errors)
     // Respond with the view with errors
-    return h.view('objectives'/*, model*/)
+    return h.view('objectives', model).takeover()
   }
 }
 
@@ -52,8 +52,12 @@ module.exports = [{
   path: '/objectives',
   options: {
     description: 'Handle the page submission the person name',
-    // pre: [{ method: pre.ensureAccountType }],
-    handler: handlers.post
-    // validate: { payload: schema, failAction: handlers.fail }
+    handler: handlers.post,
+    validate: {
+      payload: {
+        objectives: joi.string().required()
+      },
+      failAction: handlers.fail
+    }
   }
 }]
