@@ -44,7 +44,7 @@ module.exports = [{
     handler: handlers.post,
     validate: {
       payload: {
-        grade: joi.string().required()
+        grade: joi.string().required().max(30).trim()
       },
       failAction: handlers.fail
     }

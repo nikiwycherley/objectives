@@ -8,10 +8,9 @@ module.exports = [{
       const state = await session.get()
       const model = {}
       var d = new Date()
-      var fullDate = d.getDay() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear()
      
       // setting Model elements
-      model.date = fullDate
+      model.date = d
       model.firstName = state.name.firstName
       model.lastName = state.name.lastName
       model.jobTitle = state.role.jobTitle

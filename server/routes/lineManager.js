@@ -45,7 +45,7 @@ module.exports = [{
     handler: handlers.post,
     validate: {
       payload: {
-        lineManager: joi.string().required()
+        lineManager: joi.string().required().max(30).trim()
       },
       failAction: handlers.fail
     }

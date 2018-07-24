@@ -45,8 +45,8 @@ module.exports = [{
     handler: handlers.post,
     validate: {
       payload: {
-        jobTitle: joi.string().required(),
-        staffNumber: joi.string().required()
+        jobTitle: joi.string().required().max(30).trim(),
+        staffNumber: joi.string().required().max(30).trim()
       },
       failAction: handlers.fail
     }

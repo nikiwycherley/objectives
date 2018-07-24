@@ -34,7 +34,6 @@ const handlers = {
     const errors = error
     const payload = request.payload || {}
     const model = new ViewModel(payload, errors)
-    console.log(payload)
     // Respond with the view with errors
     return h.view('objectives', model).takeover()
   }
@@ -55,8 +54,8 @@ module.exports = [{
     handler: handlers.post,
     validate: {
       payload: {
-        what: joi.string().required(),
-        how: joi.string().required(),
+        what: joi.string().required().max(30).trim(),
+        how: joi.string().required().max(350).trim(),
         type: joi.string()
       },
       failAction: handlers.fail

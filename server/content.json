@@ -13,7 +13,7 @@
   },
   "lineManager": {
     "title": "Line Manager",
-    "lineManager": "Enter Line Manager",
+    "lineManager": "Enter the name of your line manager",
     "error":"Please enter the name of your Line Manager"
   },
    "grade": {
@@ -25,6 +25,6 @@
     "title": "Objectives",
     "what": "What (is to be achived and by when)",
     "how": "How (behaviours and values, and use of skills, competencies, experience and knowledge?)",
-    "error":"Please enter your an Objective"
+    "error":"Please enter 'What' your objective is and 'How' you will achive this"
   }
 }
